@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.PokeDapp" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <style name="ActionBarTheme" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:textColorPrimary">@color/actionBarTextColor</item>
+        <item name="android:textColorSecondary">@color/secondaryTextColor</item>
+    </style>
+
+    <!-- Toolbar -->
+    <style name="ToolbarStyle">
+        <item name="android:layout_height">80dp</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:elevation">6dp</item>
+    </style>
+
+    <style name="ToolbarTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+</resources>
