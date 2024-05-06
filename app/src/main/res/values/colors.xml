@@ -10,8 +10,8 @@
 
     // TODO: Trocar para as cores certas
     <color name="primaryTextColor">#000000</color>
-    <color name="secondaryTextColor">#888888</color>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorAccent">#BB3300</color>
+    <color name="secondaryTextColor">#8D8D8D</color>
+    <color name="colorPrimary">#CC3330</color>
+    <color name="colorAccent">#08005B</color>
     <color name="actionBarTextColor">#0E0E0E</color>
 </resources>

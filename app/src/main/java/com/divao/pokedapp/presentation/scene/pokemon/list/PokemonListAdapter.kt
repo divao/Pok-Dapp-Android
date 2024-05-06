@@ -1,13 +1,14 @@
 package com.divao.pokedapp.presentation.scene.pokemon.list
 
 import android.content.Context
+import android.widget.TextView
+import androidx.compose.ui.text.capitalize
 import com.bumptech.glide.Glide
 import com.divao.pokedapp.R
-import com.divao.pokedapp.databinding.ItemPokemonListPokemonBinding
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.Item
-import com.xwray.groupie.databinding.BindableItem
+import java.util.Locale
 
 class PokemonListAdapter(private val context: Context?) : GroupAdapter<GroupieViewHolder>() {
 
@@ -27,6 +28,8 @@ class PokemonListAdapter(private val context: Context?) : GroupAdapter<GroupieVi
                     .load(pokemonVM.imageURL)
                     .into(viewHolder.itemView.findViewById(R.id.pokemonListImageView))
             }
+            viewHolder.itemView.findViewById<TextView>(R.id.pokemonListNameTextView).text =
+                pokemonVM.name.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.ROOT) else it.toString() }
         }
 
         override fun getLayout(): Int = R.layout.item_pokemon_list_pokemon

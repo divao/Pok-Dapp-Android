@@ -19,4 +19,10 @@
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
+
+    <!-- Pokemon Summary -->
+    <style name="PokemonSummaryTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
+    </style>
 </resources>
