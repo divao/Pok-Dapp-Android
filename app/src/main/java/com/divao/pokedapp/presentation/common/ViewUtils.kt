@@ -8,7 +8,11 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 
-fun hideKeyboardIfNecessaryOnMotionEvent(activity: Activity, currentlyFocusedView: View?, motionEvent: MotionEvent) {
+fun hideKeyboardIfNecessaryOnMotionEvent(
+    activity: Activity,
+    currentlyFocusedView: View?,
+    motionEvent: MotionEvent
+) {
     if (motionEvent.action == MotionEvent.ACTION_DOWN) {
         val view = currentlyFocusedView
         if (view != null && view is EditText) {
@@ -18,8 +22,19 @@ fun hideKeyboardIfNecessaryOnMotionEvent(activity: Activity, currentlyFocusedVie
             val rawY = motionEvent.rawY.toInt()
             if (!r.contains(rawX, rawY)) {
                 view.clearFocus()
-                (activity.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager).hideSoftInputFromWindow(currentlyFocusedView.windowToken, 0)
+                (activity.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager).hideSoftInputFromWindow(
+                    currentlyFocusedView.windowToken,
+                    0
+                )
             }
         }
     }
 }
+
+fun pokemonUrlToId(url: String): Int {
+    val urlParts = url.split("/")
+    return urlParts[urlParts.size - 2].toInt()
+}
+
+fun pokemonIdToImageUrl(pokemonId: Int): String =
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/$pokemonId.png"
