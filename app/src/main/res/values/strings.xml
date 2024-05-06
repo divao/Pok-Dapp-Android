@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PokéDapp</string>
+    <string name="pokemon">Pokémon</string>
+    <string name="pokedex">Pokédex</string>
+    <string name="generic_error_message">Could not establish communication, please try again.</string>
+    <string name="no_internet_error_message">It looks like you\'re not connected to the internet.</string>
+    <string name="ok">OK</string>
+    <string name="try_again">Try Again</string>
+</resources>
